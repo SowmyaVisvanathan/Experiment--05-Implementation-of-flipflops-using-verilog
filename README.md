@@ -113,6 +113,7 @@ Developed by: SOWMYA V
 RegisterNumber: 212222110045 
 
 SR FLIP FLOP
+
 module exp5a(S,R,Q,Qbar,Clk);
 input S,R,Clk;
 output reg Q,Qbar;
@@ -127,6 +128,17 @@ endmodule
 
 JK FLIP FLOP
 
+module exp5b(J,K,clk,Q,Qbar);
+input J,K,clk;
+output reg Q,Qbar;
+initial Q=0;
+initial Qbar=1;
+always @(posedge clk)
+begin
+    Q=((~Q)&J)|(Q&(~K));
+    Qbar=~Q ;
+end
+endmodule
 
 
 
@@ -135,9 +147,8 @@ JK FLIP FLOP
 
 ![image](https://github.com/SowmyaVisvanathan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475775/1c656ab7-9729-4fe7-bd74-a39472389d8e)
 
-![image](https://github.com/SowmyaVisvanathan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475775/f2bd4fe2-07fc-4a38-8801-4efbb178bae1)
 
-
+![image](https://github.com/SowmyaVisvanathan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475775/8a1902a0-613c-422b-ac30-08b1649968c1)
 
 
 
@@ -145,11 +156,9 @@ JK FLIP FLOP
 
 ### TIMING DIGRAMS FOR FLIP FLOPS 
 
-1. SR FLIP FLOP
 ![image](https://github.com/SowmyaVisvanathan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475775/e9e1b112-78c5-4520-a43c-4fd3c58b92f1)
 
-2. JK FLIP FLOP
-![image](https://github.com/SowmyaVisvanathan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475775/8a1902a0-613c-422b-ac30-08b1649968c1)
 
+![image](https://github.com/SowmyaVisvanathan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475775/f2bd4fe2-07fc-4a38-8801-4efbb178bae1)
 
 ### RESULTS 

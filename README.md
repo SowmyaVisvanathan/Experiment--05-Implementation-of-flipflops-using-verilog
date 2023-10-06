@@ -1,7 +1,11 @@
-# Experiment--05-Implementation-of-flipflops-using-verilog
-### AIM: To implement all the flipflops using verilog and validating their functionality using their functional tables
-### HARDWARE REQUIRED:  – PC, Cyclone II , USB flasher
-### SOFTWARE REQUIRED:   Quartus prime
+# Experiment 05-Implementation of flipflops using verilog
+### AIM: 
+To implement all the flipflops using verilog and validating their functionality using their functional tables
+### HARDWARE REQUIRED:  
+PC, Cyclone II , USB flasher
+### SOFTWARE REQUIRED:   
+Quartus prime
+
 ### THEORY 
 SR Flip-Flop
 SR flip-flop operates with only positive clock transitions or negative clock transitions. Whereas, SR latch operates with enable signal. The circuit diagram of SR flip-flop is shown in the following figure.
@@ -101,12 +105,21 @@ From the above characteristic table, we can directly write the next state equati
 Q(t+1)=T′Q(t)+TQ(t)′
 ⇒Q(t+1)=T⊕Q(t)
 
-### Procedure
-/* write all the steps invloved */
+### Procedure:
+
+1.Open Quartus II and select new project and choose the file location.
+
+2.Module Declaration. Module should have the file name.
+
+3.Declare Inputs and outputs.
+
+4.Use assign declaration and wire to define the functionality of logic circuits.
+
+5.End the program with endmodule. 6.Run the program and choose RTL viewer to get RTL realization.
 
 
 
-### PROGRAM 
+### PROGRAM:
 ```
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
 Developed by: SOWMYA V
@@ -125,30 +138,68 @@ Q=S|(Q&(~R));
 Qbar=R|(Qbar&(~S));
 end
 endmodule
-
+```
+```
 JK FLIP FLOP
 
-module exp5b(J,K,clk,Q,Qbar);
+module jk(J,K,clk,Q,Qbar);
 input J,K,clk;
 output reg Q,Qbar;
 initial Q=0;
 initial Qbar=1;
 always @(posedge clk)
 begin
-    Q=((~Q)&J)|(Q&(~K));
-    Qbar=~Q ;
+Q=(J&(~Q))|((~K)&Q);
+Qbar=((~J)&(Qbar))|K&(~Qbar);
 end
 endmodule
+```
+```
+T FLIP FLOP:
 
+module t(T,clk,Q,Qbar);
+input T,clk;
+output reg Q;
+output reg Qbar;
+initial Q=0;
+initial Qbar=1;
+always @(posedge clk)
+begin
+Q=(T&(~Q))|((~T)&Q);
+Qbar=((~T)&Qbar)|(T&(~Qbar));
+end
+endmodule
+```
+```
+D FLIP FLOP:
 
+module d(D,clk,Q,Qbar);
+input D,clk;
+output reg Q;
+output reg Qbar;
+initial Q=0;
+initial Qbar=1;
+always @(posedge clk)
+begin
+Q=D;
+Qbar=~D;
+end
+endmodule
 
 ```
 ### RTL LOGIC FOR FLIPFLOPS 
 
+### SR FLIPFLOP
 ![image](https://github.com/SowmyaVisvanathan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475775/1c656ab7-9729-4fe7-bd74-a39472389d8e)
 
+### JK FLIPFLOP
+![image](https://github.com/SowmyaVisvanathan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475775/80ea4f3a-55a7-4d86-bfa3-5088e5c8df22)
 
-![image](https://github.com/SowmyaVisvanathan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475775/8a1902a0-613c-422b-ac30-08b1649968c1)
+### T FLIPFLOP
+![image](https://github.com/SowmyaVisvanathan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475775/8a71ceff-0277-4459-8caa-60fd5551cff3)
+
+### D FLIPFLOP
+![image](https://github.com/SowmyaVisvanathan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475775/876ba8fb-40ff-45a6-8a65-6a3d66101e1d)
 
 
 
@@ -156,9 +207,22 @@ endmodule
 
 ### TIMING DIGRAMS FOR FLIP FLOPS 
 
+### SR FLIPFLOP
 ![image](https://github.com/SowmyaVisvanathan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475775/e9e1b112-78c5-4520-a43c-4fd3c58b92f1)
 
 
-![image](https://github.com/SowmyaVisvanathan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475775/f2bd4fe2-07fc-4a38-8801-4efbb178bae1)
+### JK FLIPFLOP
+![image](https://github.com/SowmyaVisvanathan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475775/e0c54e22-3c7f-44b2-a1ff-5f88d3cb0a66)
+
+
+### T FLIPFLOP
+![image](https://github.com/SowmyaVisvanathan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475775/44711186-063f-4572-ad3a-7651a395c08c)
+
+
+### D FLIPFLOP
+![image](https://github.com/SowmyaVisvanathan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475775/741d27f9-91e1-438b-af16-be55cf88e661)
+
+
 
 ### RESULTS 
+Successfully implemented all the flipflops using verilog and validated their functionality using their functional tables.

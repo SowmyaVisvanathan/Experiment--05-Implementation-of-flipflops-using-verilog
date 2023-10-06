@@ -124,7 +124,8 @@ Q(t+1)=T′Q(t)+TQ(t)′
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
 Developed by: SOWMYA V
 RegisterNumber: 212222110045 
-
+```
+```
 SR FLIP FLOP
 
 module exp5a(S,R,Q,Qbar,Clk);
@@ -192,11 +193,14 @@ endmodule
 ### SR FLIPFLOP
 ![image](https://github.com/SowmyaVisvanathan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475775/1c656ab7-9729-4fe7-bd74-a39472389d8e)
 
+
 ### JK FLIPFLOP
 ![image](https://github.com/SowmyaVisvanathan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475775/80ea4f3a-55a7-4d86-bfa3-5088e5c8df22)
 
+
 ### T FLIPFLOP
 ![image](https://github.com/SowmyaVisvanathan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475775/8a71ceff-0277-4459-8caa-60fd5551cff3)
+
 
 ### D FLIPFLOP
 ![image](https://github.com/SowmyaVisvanathan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475775/876ba8fb-40ff-45a6-8a65-6a3d66101e1d)

@@ -236,7 +236,7 @@ endmodule
 
 
 ### T FLIPFLOP
-![image](https://github.com/SowmyaVisvanathan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475775/44711186-063f-4572-ad3a-7651a395c08c)
+![image](https://github.com/SowmyaVisvanathan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475775/322fdd40-af00-4bea-bb4f-5dd441e6f232)
 
 
 ### D FLIPFLOP
